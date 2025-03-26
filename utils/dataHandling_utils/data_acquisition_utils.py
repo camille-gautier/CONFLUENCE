@@ -56,11 +56,10 @@ class gistoolRunner:
             f"--lon-lims={lon_lims}",
             f"--variable={variables}",
             f"--prefix=domain_{self.domain_name}_",
-            f"--lib-path={self.config['GISTOOL_LIB_PATH']}"
             "--submit-job",
             "--print-geotiff=true",
             f"--cache={self.tool_cache}",
-            f"--account={self.config['TOOL_ACCOUNT']}"
+            f"--cluster={self.config['CLUSTER']}"
         ] 
         
         if start_date and end_date:
