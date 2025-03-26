@@ -97,6 +97,7 @@ GISTOOL_PATH: default                                          # Path to gistool
 EASYMORE_CLIENT: easymore cli                                  # Name of easymore client
 DATATOOL_DATASET_ROOT: /project/rrg-mclark/data/meteorological-data/    # Path to datatool datasets root directory
 TOOL_ACCOUNT: def-mclark-ab                                    # HPC account for running datatool
+CLUSTER: /home/user/datatool/etc/clusters/ucalgary-arc.json     # cluster for running datatool
 GISTOOL_DATASET_ROOT: /project/rrg-mclark/data/geospatial-data/         # Path to gistool datasets root directory
 GISTOOL_LIB_PATH: /project/rrg-mclark/lib/                     # Path to gistool libraries
 TOOL_CACHE: default                                            # Path to gistool cache directory
