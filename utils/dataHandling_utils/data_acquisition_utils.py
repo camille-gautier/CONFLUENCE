@@ -37,8 +37,11 @@ class gistoolRunner:
         from utils.configHandling_utils.config_utils import get_default_path # type: ignore
 
         #Get the path to the directory containing the gistool script
-        self.gistool_path = get_default_path(self.config, self.data_dir, self.config['GISTOOL_PATH'], 'installs/gistool', self.logger)
-    
+        if self.config['GISTOOL_PATH'] == 'default':
+            self.gistool_path = get_default_path(self.config, self.data_dir, self.config['GISTOOL_PATH'], 'installs/gistool', self.logger)
+        else:
+            self.gistool_path = Path(self.config['GISTOOL_PATH'])
+            
     def create_gistool_command(self, dataset, output_dir, lat_lims, lon_lims, variables, start_date=None, end_date=None):
         dataset_dir = dataset
         if dataset == 'soil_class':
